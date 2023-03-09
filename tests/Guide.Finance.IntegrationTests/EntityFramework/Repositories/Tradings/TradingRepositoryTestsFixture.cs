@@ -1,21 +1,10 @@
-﻿using Guide.Finance.EntityFramework;
-using Microsoft.EntityFrameworkCore;
+﻿using Guide.Finance.IntegrationTests.Base;
 
 namespace Guide.Finance.IntegrationTests.EntityFramework.Repositories.Tradings;
 
-public class TradingRepositoryTestsFixture
+public class TradingRepositoryTestsFixture : BaseFixture
 {
-    public GuideFinanceDbContext CreateDbContext()
-    {
-        var dbContext = new GuideFinanceDbContext(
-            new DbContextOptionsBuilder<GuideFinanceDbContext>()
-                .UseInMemoryDatabase(Guid.NewGuid().ToString()).Options);
-
-        dbContext.Database.EnsureDeleted();
-        dbContext.Database.EnsureCreated();
-
-        return dbContext;
-    }
+    
 }
 
 [CollectionDefinition(nameof(TradingRepositoryTestsFixture))]
