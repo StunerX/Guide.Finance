@@ -2,12 +2,12 @@
 
 public class CreateTradingOutput
 {
-    public string Id { get; }
+    public Guid Id { get; }
     public string Symbol { get; }
     public decimal Price { get; }
     public DateTime CreatedAt { get; }
     
-    public CreateTradingOutput(string id, string symbol, decimal price, DateTime createdAt)
+    public CreateTradingOutput(Guid id, string symbol, decimal price, DateTime createdAt)
     {
         Id = id;
         Symbol = symbol;
