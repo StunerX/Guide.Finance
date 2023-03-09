@@ -9,6 +9,10 @@ public class Trading
     public decimal Price { get; }
     public DateTime CreatedAt { get; }
 
+    public Trading()
+    {
+        
+    }
     public Trading(string symbol, decimal price, DateTime? createdAt = null)
     {
         Id = Guid.NewGuid();

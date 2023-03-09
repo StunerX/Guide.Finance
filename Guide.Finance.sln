@@ -14,6 +14,17 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Guide.Finance.IntegrationTe
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Guide.Finance.EntityFramework", "src\Guide.Finance.EntityFramework\Guide.Finance.EntityFramework.csproj", "{E4443B3F-4A3B-4D7B-89D3-83224D71AB20}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Guide.Finance.E2ETests", "tests\Guide.Finance.E2ETests\Guide.Finance.E2ETests.csproj", "{D7BD3274-4851-4A37-9BF1-BDA344932147}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "env", "env", "{063CF431-B4CD-4EEF-89CC-D4B08EEE262F}"
+	ProjectSection(SolutionItems) = preProject
+		docker-compose.yml = docker-compose.yml
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Guide.Finance.Trading.Api", "src\Guide.Finance.Trading.Api\Guide.Finance.Trading.Api.csproj", "{7D703B17-FB17-4B89-B596-76EA0360E706}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Guide.Finance.Configurations", "src\Guide.Finance.Configurations\Guide.Finance.Configurations.csproj", "{21AD54BF-F332-4FD4-A9D6-137ACD260768}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -40,6 +51,18 @@ Global
 		{E4443B3F-4A3B-4D7B-89D3-83224D71AB20}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E4443B3F-4A3B-4D7B-89D3-83224D71AB20}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E4443B3F-4A3B-4D7B-89D3-83224D71AB20}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D7BD3274-4851-4A37-9BF1-BDA344932147}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D7BD3274-4851-4A37-9BF1-BDA344932147}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D7BD3274-4851-4A37-9BF1-BDA344932147}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D7BD3274-4851-4A37-9BF1-BDA344932147}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7D703B17-FB17-4B89-B596-76EA0360E706}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7D703B17-FB17-4B89-B596-76EA0360E706}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7D703B17-FB17-4B89-B596-76EA0360E706}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7D703B17-FB17-4B89-B596-76EA0360E706}.Release|Any CPU.Build.0 = Release|Any CPU
+		{21AD54BF-F332-4FD4-A9D6-137ACD260768}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{21AD54BF-F332-4FD4-A9D6-137ACD260768}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{21AD54BF-F332-4FD4-A9D6-137ACD260768}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{21AD54BF-F332-4FD4-A9D6-137ACD260768}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{661D1CBD-292F-4CB0-B844-D4BA0982F312} = {E56DEB3C-2223-455B-A9ED-77085F9AE8A5}
@@ -47,5 +70,8 @@ Global
 		{D918E71F-E920-4ABC-A23A-7B5591E71885} = {06F5C562-B79D-4C6C-910B-B74412366519}
 		{0B1F20D0-95A6-4F06-9238-8BD28CC01735} = {E56DEB3C-2223-455B-A9ED-77085F9AE8A5}
 		{E4443B3F-4A3B-4D7B-89D3-83224D71AB20} = {06F5C562-B79D-4C6C-910B-B74412366519}
+		{D7BD3274-4851-4A37-9BF1-BDA344932147} = {E56DEB3C-2223-455B-A9ED-77085F9AE8A5}
+		{7D703B17-FB17-4B89-B596-76EA0360E706} = {06F5C562-B79D-4C6C-910B-B74412366519}
+		{21AD54BF-F332-4FD4-A9D6-137ACD260768} = {06F5C562-B79D-4C6C-910B-B74412366519}
 	EndGlobalSection
 EndGlobal
