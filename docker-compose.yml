@@ -1,0 +1,11 @@
+version: '3.4'
+
+services: 
+  guide.finance.db:
+    container_name: guidefinancedb
+    hostname: guidefinancedb
+    image: mysql
+    ports:
+      - 3306:3306
+    environment:
+      MYSQL_ROOT_PASSWORD: root
