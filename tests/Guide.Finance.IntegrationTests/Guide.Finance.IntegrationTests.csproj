@@ -24,6 +24,7 @@
     </ItemGroup>
 
     <ItemGroup>
+      <ProjectReference Include="..\..\src\Guide.Finance.Application\Guide.Finance.Application.csproj" />
       <ProjectReference Include="..\..\src\Guide.Finance.Domain\Guide.Finance.Domain.csproj" />
       <ProjectReference Include="..\..\src\Guide.Finance.EntityFramework\Guide.Finance.EntityFramework.csproj" />
     </ItemGroup>

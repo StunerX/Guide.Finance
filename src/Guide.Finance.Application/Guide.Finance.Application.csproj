@@ -12,6 +12,7 @@
 
     <ItemGroup>
       <ProjectReference Include="..\Guide.Finance.Domain\Guide.Finance.Domain.csproj" />
+      <ProjectReference Include="..\Guide.Finance.EntityFramework\Guide.Finance.EntityFramework.csproj" />
     </ItemGroup>
 
 </Project>
