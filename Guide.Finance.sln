@@ -1,8 +1,21 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{E56DEB3C-2223-455B-A9ED-77085F9AE8A5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Guide.Finance.UnitTests", "tests\Guide.Finance.UnitTests\Guide.Finance.UnitTests.csproj", "{661D1CBD-292F-4CB0-B844-D4BA0982F312}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
 		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{661D1CBD-292F-4CB0-B844-D4BA0982F312}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{661D1CBD-292F-4CB0-B844-D4BA0982F312}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{661D1CBD-292F-4CB0-B844-D4BA0982F312}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{661D1CBD-292F-4CB0-B844-D4BA0982F312}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{661D1CBD-292F-4CB0-B844-D4BA0982F312} = {E56DEB3C-2223-455B-A9ED-77085F9AE8A5}
 	EndGlobalSection
 EndGlobal
