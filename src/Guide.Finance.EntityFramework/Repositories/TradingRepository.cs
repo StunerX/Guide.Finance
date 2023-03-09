@@ -18,4 +18,9 @@ public class TradingRepository : ITradingRepository
     {
         await Tradings.AddAsync(trading, cancellationToken);
     }
+
+    public async Task<IEnumerable<Trading>> GetAll(CancellationToken cancellationToken = default)
+    {
+        return await Tradings.ToListAsync(cancellationToken);
+    }
 }
