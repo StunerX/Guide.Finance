@@ -28,6 +28,7 @@
     <ItemGroup>
       <ProjectReference Include="..\..\src\Guide.Finance.EntityFramework\Guide.Finance.EntityFramework.csproj" />
       <ProjectReference Include="..\..\src\Guide.Finance.Trading.Api\Guide.Finance.Trading.Api.csproj" />
+      <ProjectReference Include="..\..\src\Guide.Finance.Yahoo.Integration\Guide.Finance.Yahoo.Integration.csproj" />
     </ItemGroup>
 
 </Project>
