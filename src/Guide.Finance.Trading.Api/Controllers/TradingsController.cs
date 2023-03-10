@@ -21,9 +21,9 @@ public class TradingsController : ControllerBase
     [ProducesResponseType(typeof(CreateTradingOutput), StatusCodes.Status201Created)]
     [ProducesResponseType(typeof(ProblemDetails), StatusCodes.Status400BadRequest)]
     [ProducesResponseType(typeof(ProblemDetails), StatusCodes.Status422UnprocessableEntity)]
-    public async Task<IActionResult> Post([FromBody] CreateTradingInput category, CancellationToken cancellationToken)
+    public async Task<IActionResult> Post([FromBody] CreateTradingInput trading, CancellationToken cancellationToken)
     {
-        var output = await _mediator.Send(category, cancellationToken);
+        var output = await _mediator.Send(trading, cancellationToken);
         return CreatedAtAction(nameof(Post), new  {output.Id}, output);
     }
     

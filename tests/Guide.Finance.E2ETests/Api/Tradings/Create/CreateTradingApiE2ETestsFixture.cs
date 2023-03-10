@@ -9,6 +9,6 @@ public class CreateTradingApiE2ETestsFixture : BaseFixture
 }
 
 [CollectionDefinition(nameof(CreateTradingApiE2ETestsFixture))]
-public class CreateCategoryE2ETestsFixtureCollection : ICollectionFixture<CreateTradingApiE2ETestsFixture>
+public class CreateTradingApiE2ETestsFixtureCollection : ICollectionFixture<CreateTradingApiE2ETestsFixture>
 {
 }

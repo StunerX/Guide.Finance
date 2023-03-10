@@ -19,19 +19,19 @@ public class CreateTradingApiE2eTests
     [Fact]
     public async Task ShouldCreateTrading()
     {
-        var createCategoryInput = new CreateTradingInput()
+        var createTradingInput = new CreateTradingInput()
         {
             Price = 1m,
             Symbol = "PETR4",
         };
         
-        var jsonContent = JsonConvert.SerializeObject(createCategoryInput);
+        var jsonContent = JsonConvert.SerializeObject(createTradingInput);
         var content = new StringContent(jsonContent, Encoding.UTF8, "application/json");
         var response = await _fixture.ApiClient.PostAsync("/tradings", content);
         response.Should().NotBeNull();
         var responseContent = await response.Content.ReadAsStringAsync();
-        var category = JsonConvert.DeserializeObject<CreateTradingOutput>(responseContent);
+        var trading = JsonConvert.DeserializeObject<CreateTradingOutput>(responseContent);
 
-        category.Should().NotBeNull();
+        trading.Should().NotBeNull();
     }
 }
