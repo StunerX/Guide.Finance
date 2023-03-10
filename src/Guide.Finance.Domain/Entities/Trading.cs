@@ -7,18 +7,21 @@ public class Trading
     public Guid Id { get; }
     public string Symbol { get; }
     public decimal Price { get; }
+    public DateTime Date { get; set; }
     public DateTime CreatedAt { get; }
+    
 
     public Trading()
     {
         
     }
-    public Trading(string symbol, decimal price, DateTime? createdAt = null)
+    public Trading(string symbol, decimal price, DateTime date)
     {
         Id = Guid.NewGuid();
         Symbol = symbol;
         Price = price;
-        CreatedAt = createdAt ?? DateTime.Now;
+        Date = date;
+        CreatedAt = DateTime.UtcNow;
     }
     
     public decimal GetPercentVariation(decimal tradingPrice)

@@ -15,7 +15,7 @@ public class CreateTradingUseCase : ICreateTradingUseCase
     }
     public async Task<CreateTradingOutput> Handle(CreateTradingInput request, CancellationToken cancellationToken)
     {
-        var trading = new Trading(request.Symbol, request.Price);
+        var trading = new Trading(request.Symbol, request.Price, request.Date);
         
         await _tradingRepository.Create(trading, cancellationToken);
         await _unitOfWork.Commit(cancellationToken);

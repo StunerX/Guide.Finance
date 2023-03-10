@@ -8,7 +8,7 @@ public class TradingTests
     [Fact]
     public void ShouldCreateTrading()
     {
-        var trading = new Trading("Trading 1", 10m);
+        var trading = new Trading("Trading 1", 10m, DateTime.Now);
         trading.Should().NotBeNull();
         trading.Id.Should().NotBeEmpty();
         trading.Symbol.Should().Be("Trading 1");
@@ -19,10 +19,11 @@ public class TradingTests
     [Fact]
     public void ShouldGetPercentVariation()
     {
-        var trading1 = new Trading("Trading 1", 1m);
-        var trading2 = new Trading("Trading 2", 1.10m);
-        var trading3 = new Trading("Trading 3", 1.05m);
-        var trading4 = new Trading("Trading 4", 1.90m);
+        var today = DateTime.Now;
+        var trading1 = new Trading("Trading 1", 1m, today.AddDays(-4));
+        var trading2 = new Trading("Trading 2", 1.10m, today.AddDays(-3));
+        var trading3 = new Trading("Trading 3", 1.05m, today.AddDays(-2));
+        var trading4 = new Trading("Trading 4", 1.90m, today.AddDays(-1));
 
         trading1.GetPercentVariation(trading1.Price).Should().Be(0m);
         trading2.GetPercentVariation(trading1.Price).Should().Be(10m);

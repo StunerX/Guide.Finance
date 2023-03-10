@@ -17,7 +17,7 @@ public class TradingRepositoryTests
     [Fact]
     public async Task ShouldCreateTrading()
     {
-        var trading = new Trading("Trading 1", 10m);
+        var trading = new Trading("Trading 1", 10m, DateTime.Now);
         var dbContext = _fixture.CreateDbContext();
         var tradingRepository = new TradingRepository(dbContext);
         await tradingRepository.Create(trading, CancellationToken.None);

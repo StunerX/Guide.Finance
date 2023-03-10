@@ -12,7 +12,7 @@ public class CreateTradingUseCaseTests
     [Fact]
     public async Task ShouldCreateTrading()
     {
-        var trading = new Trading("Trading 1", 10m);
+        var trading = new Trading("Trading 1", 10m, DateTime.Now);
         var createTradingInput = new CreateTradingInput() { Symbol = trading.Symbol, Price = trading.Price };
         var tradingRepository = new Mock<ITradingRepository>();
         

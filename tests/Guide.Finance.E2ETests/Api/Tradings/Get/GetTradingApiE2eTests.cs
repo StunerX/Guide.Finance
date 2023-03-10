@@ -21,13 +21,14 @@ public class GetTradingApiE2ETests
     [Fact]
     public async Task ShouldGetTradingVariationPrice()
     {
-        var trading1 = new Domain.Entities.Trading("PETR4", 1m);
+        var today = DateTime.Now;
+        var trading1 = new Domain.Entities.Trading("PETR4", 1m, today.AddDays(-3));
         Thread.Sleep(1000);
-        var trading2 = new Domain.Entities.Trading("PETR4", 1.10m);
+        var trading2 = new Domain.Entities.Trading("PETR4", 1.10m, today.AddDays(-2));
         Thread.Sleep(1000);
-        var trading3 = new Domain.Entities.Trading("PETR4", 1.05m);
+        var trading3 = new Domain.Entities.Trading("PETR4", 1.05m, today.AddDays(-1));
         Thread.Sleep(1000);
-        var trading4 = new Domain.Entities.Trading("PETR4", 1.90m);
+        var trading4 = new Domain.Entities.Trading("PETR4", 1.90m, today);
         Thread.Sleep(1000);
 
         await _fixture.DbContext.AddAsync(trading1);
