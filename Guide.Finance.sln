@@ -25,6 +25,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Guide.Finance.Trading.Api",
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Guide.Finance.Configurations", "src\Guide.Finance.Configurations\Guide.Finance.Configurations.csproj", "{21AD54BF-F332-4FD4-A9D6-137ACD260768}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Guide.Finance.Yahoo.Integration", "src\Guide.Finance.Yahoo.Integration\Guide.Finance.Yahoo.Integration.csproj", "{95251ECF-62C2-4D59-88B9-CA2ECF3A60F5}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -63,6 +65,10 @@ Global
 		{21AD54BF-F332-4FD4-A9D6-137ACD260768}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{21AD54BF-F332-4FD4-A9D6-137ACD260768}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{21AD54BF-F332-4FD4-A9D6-137ACD260768}.Release|Any CPU.Build.0 = Release|Any CPU
+		{95251ECF-62C2-4D59-88B9-CA2ECF3A60F5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{95251ECF-62C2-4D59-88B9-CA2ECF3A60F5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{95251ECF-62C2-4D59-88B9-CA2ECF3A60F5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{95251ECF-62C2-4D59-88B9-CA2ECF3A60F5}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{661D1CBD-292F-4CB0-B844-D4BA0982F312} = {E56DEB3C-2223-455B-A9ED-77085F9AE8A5}
@@ -73,5 +79,6 @@ Global
 		{D7BD3274-4851-4A37-9BF1-BDA344932147} = {E56DEB3C-2223-455B-A9ED-77085F9AE8A5}
 		{7D703B17-FB17-4B89-B596-76EA0360E706} = {06F5C562-B79D-4C6C-910B-B74412366519}
 		{21AD54BF-F332-4FD4-A9D6-137ACD260768} = {06F5C562-B79D-4C6C-910B-B74412366519}
+		{95251ECF-62C2-4D59-88B9-CA2ECF3A60F5} = {06F5C562-B79D-4C6C-910B-B74412366519}
 	EndGlobalSection
 EndGlobal
