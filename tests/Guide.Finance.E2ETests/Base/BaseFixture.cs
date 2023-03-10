@@ -20,7 +20,7 @@ public class BaseFixture
         HttpClient = WebFactory.CreateClient();
         ApiClient = new ApiClient(HttpClient);
         var configuration = WebFactory.Services.GetService(typeof(IConfiguration));
-        _dbConnectionString = ((IConfiguration)configuration).GetConnectionString("CatalogDb");
+        _dbConnectionString = ((IConfiguration)configuration).GetConnectionString("GuideFinanceDb");
     }
     
     public GuideFinanceDbContext CreateDbContext()

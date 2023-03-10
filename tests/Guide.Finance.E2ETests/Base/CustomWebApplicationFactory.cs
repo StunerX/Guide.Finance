@@ -9,6 +9,7 @@ public class CustomWebApplicationFactory<TStartup> : WebApplicationFactory<TStar
 {
     protected override void ConfigureWebHost(IWebHostBuilder builder)
     {
+       
         builder.UseEnvironment("E2ETests");
         builder.ConfigureServices(services =>
         {
@@ -18,6 +19,7 @@ public class CustomWebApplicationFactory<TStartup> : WebApplicationFactory<TStar
             var db = scopedServices.GetService<GuideFinanceDbContext>();
             db.Database.EnsureDeleted();
             db.Database.EnsureCreated();
+            
         });
         base.ConfigureWebHost(builder);
     }
