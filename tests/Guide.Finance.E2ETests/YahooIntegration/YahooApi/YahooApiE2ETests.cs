@@ -17,7 +17,7 @@ public class YahooApiE2ETests
     [Fact]
     public async Task ShouldGetTradingsInfo()
     {
-        var yahooApi = new Yahoo.Integration.YahooApi(_fixture.HttpClient);
+        var yahooApi = new Yahoo.Integration.YahooApi(null);
 
         var result = await yahooApi.GetTradingInfo("PETR4.SA", DateTime.Now);
         result.Should().NotBeNull();

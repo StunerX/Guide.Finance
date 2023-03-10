@@ -13,6 +13,7 @@
 
     <ItemGroup>
       <ProjectReference Include="..\Guide.Finance.Application\Guide.Finance.Application.csproj" />
+      <ProjectReference Include="..\Guide.Finance.Yahoo.Integration\Guide.Finance.Yahoo.Integration.csproj" />
     </ItemGroup>
 
 </Project>

@@ -5,9 +5,9 @@ namespace Guide.Finance.Yahoo.Integration;
 
 public class TradingIntegration : ITradingIntegration
 {
-    private readonly YahooApi _yahooApi;
+    private readonly IYahooApi _yahooApi;
 
-    public TradingIntegration(YahooApi yahooApi)
+    public TradingIntegration(IYahooApi yahooApi)
     {
         _yahooApi = yahooApi;
     }

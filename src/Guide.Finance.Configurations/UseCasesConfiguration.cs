@@ -4,6 +4,7 @@ using Guide.Finance.Application.UseCases.Tradings.Create;
 using Guide.Finance.Application.UseCases.Tradings.Get;
 using Guide.Finance.Domain.Interfaces;
 using Guide.Finance.EntityFramework.Repositories;
+using Guide.Finance.Yahoo.Integration;
 using MediatR;
 using Microsoft.Extensions.DependencyInjection;
 
@@ -20,8 +21,15 @@ public static class UseCasesConfiguration
   
   public static IServiceCollection AddRepositories(this IServiceCollection services)
   {
-    services.AddTransient<ITradingRepository, TradingRepository>();
-    services.AddTransient<IUnitOfWork, UnitOfWork>();
+    services.AddScoped<ITradingRepository, TradingRepository>();
+    services.AddScoped<IUnitOfWork, UnitOfWork>();
+    return services;
+  }
+  
+  public static IServiceCollection AddIntegrators(this IServiceCollection services)
+  {
+    services.AddScoped<IYahooApi, YahooApi>();
+    services.AddScoped<ITradingIntegration, TradingIntegration>();
     return services;
   }
 }

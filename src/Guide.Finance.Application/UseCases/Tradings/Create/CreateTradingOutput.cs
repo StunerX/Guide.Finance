@@ -6,7 +6,7 @@ public class CreateTradingOutput
     public string Symbol { get; }
     public decimal Price { get; }
     public DateTime CreatedAt { get; }
-    
+
     public CreateTradingOutput(Guid id, string symbol, decimal price, DateTime createdAt)
     {
         Id = id;

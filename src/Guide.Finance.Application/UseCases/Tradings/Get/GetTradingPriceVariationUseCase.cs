@@ -17,14 +17,14 @@ public class GetTradingPriceVariationUseCase : IGetTradingPriceVariationUseCase
     {
         var output = new List<GetTradingPriceVariationOutput>();
         var tradings = (await _tradingRepository.GetAll(cancellationToken))
-            .OrderBy(x => x.CreatedAt).ToList();
+            .OrderBy(x => x.Date).ToList();
 
         if (!tradings.Any())
             throw new Exception("No tradings found.");
 
         var tradingD1 = tradings.MinBy(x => x.CreatedAt);
         output.Add(new GetTradingPriceVariationOutput(tradingD1!.Id, tradingD1.Symbol, tradingD1.Price, 0, 0,
-            tradingD1.CreatedAt));
+            tradingD1.Date,tradingD1.CreatedAt));
 
         for (var i = 1; i < tradings.Count; i++)
         {
@@ -33,7 +33,7 @@ public class GetTradingPriceVariationUseCase : IGetTradingPriceVariationUseCase
             var variationFromLast = trading.GetPercentVariation(tradings.ElementAt(i - 1).Price);
             
             var tradingVariation = new GetTradingPriceVariationOutput(trading.Id, trading.Symbol, trading.Price,
-                variationFromFirst, variationFromLast, trading.CreatedAt);
+                variationFromFirst, variationFromLast,trading.Date, trading.CreatedAt);
             output.Add(tradingVariation);
         }
 
