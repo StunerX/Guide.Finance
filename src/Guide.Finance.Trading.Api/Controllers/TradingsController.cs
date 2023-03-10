@@ -1,4 +1,5 @@
 using Guide.Finance.Application.UseCases.Tradings.Create;
+using Guide.Finance.Application.UseCases.Tradings.Get;
 using MediatR;
 using Microsoft.AspNetCore.Mvc;
 
@@ -24,5 +25,15 @@ public class TradingsController : ControllerBase
     {
         var output = await _mediator.Send(category, cancellationToken);
         return CreatedAtAction(nameof(Post), new  {output.Id}, output);
+    }
+    
+    [HttpGet]
+    [ProducesResponseType(typeof(GetTradingPriceVariationOutput), StatusCodes.Status200OK)]
+    [ProducesResponseType(typeof(ProblemDetails), StatusCodes.Status400BadRequest)]
+    [ProducesResponseType(typeof(ProblemDetails), StatusCodes.Status422UnprocessableEntity)]
+    public async Task<IActionResult> Get(CancellationToken cancellationToken)
+    {
+        var output = await _mediator.Send(new GetTradingPriceVariationInput(), cancellationToken);
+        return Ok(output);
     }
 }
